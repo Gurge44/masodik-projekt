@@ -13,16 +13,16 @@ namespace Program
         private string parameters;
         private int cost;
 
-        public string Type { get => type; set => type = value; }
-        public string Name { get => name; set => name = value; }
-        public string Parameters { get => parameters; set => parameters = value; }
+        public string Type { get => type; set => type = value ?? string.Empty; }
+        public string Name { get => name; set => name = value ?? string.Empty; }
+        public string Parameters { get => parameters; set => parameters = value ?? string.Empty; }
         public int Cost { get => cost; set => cost = value; }
 
-        public Piece(string type, string name, string parameters, int cost)
+        public Piece(string? type, string? name, string? parameters, int cost)
         {
-            this.type = type;
-            this.name = name;
-            this.parameters = parameters;
+            this.type = type ?? string.Empty;
+            this.name = name ?? string.Empty;
+            this.parameters = parameters ?? string.Empty;
             this.cost = cost;
         }
     }
