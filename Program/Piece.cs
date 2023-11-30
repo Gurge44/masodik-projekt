@@ -6,24 +6,18 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    internal class Piece
+    internal class Piece(string? type, string? name, string? parameters, int cost)
     {
-        private string type;
-        private string name;
-        private string parameters;
-        private int cost;
+        private string type = type ?? string.Empty;
+        private string name = name ?? string.Empty;
+        private string parameters = parameters ?? string.Empty;
+        private int cost = cost;
 
         public string Type { get => type; set => type = value ?? string.Empty; }
         public string Name { get => name; set => name = value ?? string.Empty; }
         public string Parameters { get => parameters; set => parameters = value ?? string.Empty; }
         public int Cost { get => cost; set => cost = value; }
 
-        public Piece(string? type, string? name, string? parameters, int cost)
-        {
-            this.type = type ?? string.Empty;
-            this.name = name ?? string.Empty;
-            this.parameters = parameters ?? string.Empty;
-            this.cost = cost;
-        }
+        public string OutputText => $"Típus: {Type}, Név: {Name}, Adatok: {Parameters}, Ár: {Cost} Ft";
     }
 }

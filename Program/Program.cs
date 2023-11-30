@@ -2,22 +2,34 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Write all contents of a string list to a txt file
+        /// </summary>
+        /// <param name="lines">The strings to write into the file</param>
+        /// <param name="fileName">The name of the file (excluding .txt)</param>
         private static void WriteToFile(List<string> lines, string fileName)
         {
             File.WriteAllLines(fileName + ".txt", lines, System.Text.Encoding.UTF8);
             GenerateJSfile(lines, fileName);
         }
+        /// <summary>
+        /// Generates an importable JavaScript file from a string list.
+        /// </summary>
+        /// <param name="lines">The strings to write into the file</param>
+        /// <param name="fileName">The name of the file (excluding .js)</param>
         private static void GenerateJSfile(List<string> lines, string fileName)
         {
-            List<string> builder = new() { "export const PIECES = [\n" };
-            builder.AddRange(lines.Select(line => '\"' + line.Trim() + "\","));
-            builder.Add("\n]");
+            List<string> builder = ["export const PIECES = [\n", .. lines.Select(line => $"\"{line.Trim()}\","), "\n]"];
             lines = builder;
             File.WriteAllLines($"{fileName}.js", lines, System.Text.Encoding.UTF8);
         }
+        /// <summary>
+        /// Handles the process of inputting pieces by the user
+        /// </summary>
+        /// <returns>A list of pieces added by the user</returns>
         private static List<Piece> InputPiecesByUser()
         {
-            List<Piece> InputPieces = new();
+            List<Piece> InputPieces = [];
             bool stop = false;
             while (!stop)
             {
@@ -87,12 +99,11 @@
         {
             var InputPieces = InputPiecesByUser();
 
-            List<string> builder = new();
-            builder.AddRange(InputPieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}"));
+            List<string> builder = [.. InputPieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}")];
 
             WriteToFile(builder, "data");
 
-            Piece[] Pieces = InputPieces.ToArray();
+            Piece[] Pieces = [.. InputPieces];
 
             while (true)
             {
@@ -108,6 +119,8 @@
                     }
                 }
 
+                Piece[]? matches = [];
+
                 switch (result)
                 {
                     case 1: // Keresés típusra
@@ -118,7 +131,7 @@
 
                         Piece[]? typeMatches = Pieces.Where(x => x.Type.Contains(typeToFind)).ToArray();
 
-                        if (typeMatches == null || !typeMatches.Any())
+                        if (typeMatches == null || typeMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"A típus, amire rákerestél ({typeToFind}), nem található.");
@@ -142,7 +155,7 @@
 
                         Piece[]? nameMatches = Pieces.Where(x => x.Name.Contains(nameToFind)).ToArray();
 
-                        if (nameMatches == null || !nameMatches.Any())
+                        if (nameMatches == null || nameMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"A név, amire rákerestél ({nameToFind}), nem található.");
@@ -166,7 +179,7 @@
 
                         Piece[]? parameterMatches = Pieces.Where(x => x.Name.Contains(parameterToFind)).ToArray();
 
-                        if (parameterMatches == null || !parameterMatches.Any())
+                        if (parameterMatches == null || parameterMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"Az adat, amire rákerestél ({parameterToFind}), nem található.");
@@ -204,7 +217,7 @@
 
                         var costMatches = Pieces.Where(x => x.Cost >= lowerLimit && x.Cost <= upperLimit).ToArray();
 
-                        if (costMatches == null || !costMatches.Any())
+                        if (costMatches == null || costMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"Nem található egy alkatrész sem, amelynek az ára a két megadott határ között van ({lowerLimit} - {upperLimit}).");
@@ -222,7 +235,7 @@
 
                     case 5: // Statisztika készítése a típusokról
 
-                        Dictionary<string, List<Piece>> types = new();
+                        Dictionary<string, List<Piece>> types = [];
                         foreach (var piece in Pieces)
                         {
                             if (types.TryGetValue(piece.Type, out var n))
@@ -231,19 +244,20 @@
                             }
                             else
                             {
-                                types[piece.Type] = new()
-                                {
+                                types[piece.Type] =
+                                [
                                     piece
-                                };
+                                ];
                             }
                         }
 
                         foreach (var type in types)
                         {
                             Console.WriteLine($"\n\n\"{type.Key}\":\n");
+                            WriteMatchesToConsole([.. type.Value], resultText: false);
                             foreach (var piece in type.Value)
                             {
-                                Console.WriteLine("Típus: " + piece.Type + ", Név: " + piece.Name + ", Adatok: " + piece.Parameters + ", Ár: " + piece.Cost + " Ft");
+                                Console.WriteLine(piece.OutputText);
                             }
                         }
 
@@ -276,6 +290,15 @@
                     case 8: // Pontos keresés (az összes adat szükséges)
 
                         break;
+                }
+                void WriteMatchesToConsole(Piece[]? output = null, bool resultText = true)
+                {
+                    if (output != null) matches = output;
+                    if (matches == null) return;
+
+                    if (resultText) Console.WriteLine("Találatok:");
+
+                    foreach (Piece piece in matches) Console.WriteLine(piece.OutputText);
                 }
             }
 
