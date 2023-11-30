@@ -15,7 +15,7 @@
             lines = builder;
             File.WriteAllLines($"{fileName}.js", lines, System.Text.Encoding.UTF8);
         }
-        private static void Main(string[] args)
+        private static List<Piece> InputPiecesByUser()
         {
             List<Piece> InputPieces = new();
             bool stop = false;
@@ -80,6 +80,12 @@
             //{
             //    Pieces.Add(($"type{r.Next(1, 9)}", $"name{r.Next(1, 1000)}", $"parameters{r.Next(1, 10000)}", r.Next(1, 1000000)));
             //}
+
+            return InputPieces;
+        }
+        private static void Main()
+        {
+            var InputPieces = InputPiecesByUser();
 
             List<string> builder = new();
             builder.AddRange(InputPieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}"));
