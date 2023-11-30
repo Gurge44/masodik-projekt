@@ -9,15 +9,12 @@
         }
         private static void GenerateJSfile(List<string> lines, string fileName)
         {
-            List<string> builder = new() { "export const PIECES = [\n" };
-            builder.AddRange(lines.Select(line => '\"' + line.Trim() + "\","));
-            builder.Add("\n]");
-            lines = builder;
-            File.WriteAllLines($"{fileName}.js", lines, System.Text.Encoding.UTF8);
+            List<string> builder = ["export const PIECES = [\n", .. lines.Select(line => $"\"{line.Trim()}\","), "\n]"];
+            File.WriteAllLines($"{fileName}.js", builder, System.Text.Encoding.UTF8);
         }
         private static void Main(string[] args)
         {
-            List<Piece> InputPieces = new();
+            List<Piece> InputPieces = [];
             bool stop = false;
             while (!stop)
             {
@@ -81,12 +78,12 @@
             //    Pieces.Add(($"type{r.Next(1, 9)}", $"name{r.Next(1, 1000)}", $"parameters{r.Next(1, 10000)}", r.Next(1, 1000000)));
             //}
 
-            List<string> builder = new();
+            List<string> builder = [];
             builder.AddRange(InputPieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}"));
 
             WriteToFile(builder, "data");
 
-            Piece[] Pieces = InputPieces.ToArray();
+            Piece[] Pieces = [.. InputPieces];
 
             while (true)
             {
@@ -112,7 +109,7 @@
 
                         Piece[]? typeMatches = Pieces.Where(x => x.Type.Contains(typeToFind)).ToArray();
 
-                        if (typeMatches == null || !typeMatches.Any())
+                        if (typeMatches == null || typeMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"A típus, amire rákerestél ({typeToFind}), nem található.");
@@ -136,7 +133,7 @@
 
                         Piece[]? nameMatches = Pieces.Where(x => x.Name.Contains(nameToFind)).ToArray();
 
-                        if (nameMatches == null || !nameMatches.Any())
+                        if (nameMatches == null || nameMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"A név, amire rákerestél ({nameToFind}), nem található.");
@@ -160,7 +157,7 @@
 
                         Piece[]? parameterMatches = Pieces.Where(x => x.Name.Contains(parameterToFind)).ToArray();
 
-                        if (parameterMatches == null || !parameterMatches.Any())
+                        if (parameterMatches == null || parameterMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"Az adat, amire rákerestél ({parameterToFind}), nem található.");
@@ -198,7 +195,7 @@
 
                         var costMatches = Pieces.Where(x => x.Cost >= lowerLimit && x.Cost <= upperLimit).ToArray();
 
-                        if (costMatches == null || !costMatches.Any())
+                        if (costMatches == null || costMatches.Length == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine($"Nem található egy alkatrész sem, amelynek az ára a két megadott határ között van ({lowerLimit} - {upperLimit}).");
@@ -216,7 +213,7 @@
 
                     case 5: // Statisztika készítése a típusokról
 
-                        Dictionary<string, List<Piece>> types = new();
+                        Dictionary<string, List<Piece>> types = [];
                         foreach (var piece in Pieces)
                         {
                             if (types.TryGetValue(piece.Type, out var n))
@@ -225,10 +222,10 @@
                             }
                             else
                             {
-                                types[piece.Type] = new()
-                                {
+                                types[piece.Type] =
+                                [
                                     piece
-                                };
+                                ];
                             }
                         }
 
