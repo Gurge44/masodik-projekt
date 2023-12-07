@@ -2,6 +2,9 @@
 {
     internal class Program
     {
+        private const string StartHTML = "<!doctype html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title>Bootstrap demo</title>\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n  </head>\r\n  <body>\r\n    <h1>Adatok:</h1>\n";
+        private const string EndHTML = "\n\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\" crossorigin=\"anonymous\"></script>\r\n  </body>\r\n</html>";
+
         /// <summary>
         /// Write all contents of a string list to a txt file
         /// </summary>
@@ -9,19 +12,22 @@
         /// <param name="fileName">The name of the file (excluding .txt)</param>
         private static void WriteToFile(List<string> lines, string fileName)
         {
-            File.WriteAllLines(fileName + ".txt", lines, System.Text.Encoding.UTF8);
-            GenerateJSfile(lines, fileName);
-        }
-        /// <summary>
-        /// Generates an importable JavaScript file from a string list.
-        /// </summary>
-        /// <param name="lines">The strings to write into the file</param>
-        /// <param name="fileName">The name of the file (excluding .js)</param>
-        private static void GenerateJSfile(List<string> lines, string fileName)
-        {
-            List<string> builder = ["export const PIECES = [\n", .. lines.Select(line => $"\"{line.Trim()}\","), "\n]"];
-            lines = builder;
-            File.WriteAllLines($"{fileName}.js", lines, System.Text.Encoding.UTF8);
+            File.WriteAllLines($"{fileName}.txt", lines, System.Text.Encoding.UTF8);
+
+            GenerateJSfile();
+            GenerateHTMLfile();
+
+            void GenerateJSfile()
+            {
+                List<string> js = ["export const PIECES = [\n", .. lines.Select(line => $"\"{line.Trim()}\","), "\n]"];
+                File.WriteAllLines($"{fileName}.js", js, System.Text.Encoding.UTF8);
+            }
+
+            void GenerateHTMLfile()
+            {
+                List<string> html = [StartHTML, .. lines.Select(line => $"<p>{line.Trim()}</p>"), EndHTML];
+                File.WriteAllLines($"{fileName}.html", html, System.Text.Encoding.UTF8);
+            }
         }
         /// <summary>
         /// Handles the process of inputting pieces by the user
@@ -30,68 +36,68 @@
         private static List<Piece> InputPiecesByUser()
         {
             List<Piece> InputPieces = [];
-            bool stop = false;
-            while (!stop)
-            {
-                Console.WriteLine("A bevitelből való kilépéshez írd be, hogy 'quit'.\nVálaszd ki, milyen típusú alkatrészt szeretnél eltárolni, és írd be a sorszámát:\n  1. Alaplap\n  2. Processzor\n  3. Memória\n  4. Grafikus kártya\n  5. HDD / SSD\n  6. Monitor\n  7. Egér\n  8. Billentyűzet\nA választott sorszám: ");
-
-                int result = 0;
-                while (result <= 0 || result > 8)
-                {
-                    var answer = Console.ReadLine();
-                    if (answer?.ToLower() == "quit")
-                    {
-                        stop = true;
-                        break;
-                    }
-                    if (!int.TryParse(answer, out result))
-                    {
-                        Console.WriteLine("Helytelen bevitel. A választott alkatrész sorszámát írd be!");
-                    }
-                }
-
-                if (stop) break;
-
-                string type = result switch
-                {
-                    1 => "Motherboard",
-                    2 => "CPU",
-                    3 => "Memory",
-                    4 => "GraphicCard",
-                    5 => "HDD/SSD",
-                    6 => "Monitor",
-                    7 => "Mouse",
-                    8 => "Keyboard",
-                    _ => string.Empty,
-                };
-
-                Console.WriteLine();
-
-                Console.Write("Add meg az alkatrész adatait:\n  Neve: ");
-                string? name = Console.ReadLine();
-
-                Console.Write("  Részletek: ");
-                string? parameters = Console.ReadLine();
-
-                Console.Write("  Ára: ");
-                int cost = 0;
-                while (cost == 0)
-                {
-                    if (!int.TryParse(Console.ReadLine(), out cost))
-                    {
-                        Console.WriteLine("Helytelen bevitel. A választott alkatrész árát írd be!");
-                    }
-                }
-
-                InputPieces.Add(new Piece(type, name, parameters, cost));
-            }
-
-            //Random r = new();
-            //Pieces = new();
-            //for (int i = 0; i < 200; i++)
+            //bool stop = false;
+            //while (!stop)
             //{
-            //    Pieces.Add(($"type{r.Next(1, 9)}", $"name{r.Next(1, 1000)}", $"parameters{r.Next(1, 10000)}", r.Next(1, 1000000)));
+            //    Console.WriteLine("A bevitelből való kilépéshez írd be, hogy 'quit'.\nVálaszd ki, milyen típusú alkatrészt szeretnél eltárolni, és írd be a sorszámát:\n  1. Alaplap\n  2. Processzor\n  3. Memória\n  4. Grafikus kártya\n  5. HDD / SSD\n  6. Monitor\n  7. Egér\n  8. Billentyűzet\nA választott sorszám: ");
+
+            //    int result = 0;
+            //    while (result <= 0 || result > 8)
+            //    {
+            //        var answer = Console.ReadLine();
+            //        if (answer?.ToLower() == "quit")
+            //        {
+            //            stop = true;
+            //            break;
+            //        }
+            //        if (!int.TryParse(answer, out result))
+            //        {
+            //            Console.WriteLine("Helytelen bevitel. A választott alkatrész sorszámát írd be!");
+            //        }
+            //    }
+
+            //    if (stop) break;
+
+            //    string type = result switch
+            //    {
+            //        1 => "Motherboard",
+            //        2 => "CPU",
+            //        3 => "Memory",
+            //        4 => "GraphicCard",
+            //        5 => "HDD/SSD",
+            //        6 => "Monitor",
+            //        7 => "Mouse",
+            //        8 => "Keyboard",
+            //        _ => string.Empty,
+            //    };
+
+            //    Console.WriteLine();
+
+            //    Console.Write("Add meg az alkatrész adatait:\n  Neve: ");
+            //    string? name = Console.ReadLine();
+
+            //    Console.Write("  Részletek: ");
+            //    string? parameters = Console.ReadLine();
+
+            //    Console.Write("  Ára: ");
+            //    int cost = 0;
+            //    while (cost == 0)
+            //    {
+            //        if (!int.TryParse(Console.ReadLine(), out cost))
+            //        {
+            //            Console.WriteLine("Helytelen bevitel. A választott alkatrész árát írd be!");
+            //        }
+            //    }
+
+            //    InputPieces.Add(new Piece(type, name, parameters, cost));
             //}
+
+            Random r = new();
+            InputPieces = [];
+            for (int i = 0; i < 200; i++)
+            {
+                InputPieces.Add(new Piece($"type{r.Next(1, 9)}", $"name{r.Next(1, 1000)}", $"parameters{r.Next(1, 10000)}", r.Next(1, 1000000)));
+            }
 
             return InputPieces;
         }

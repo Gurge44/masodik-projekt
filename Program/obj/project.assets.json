@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gregor.gergo\\masodik-projekt\\Program\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "C:\\Users\\gregor.gergo\\masodik-projekt\\Program\\Program.csproj",
+      "projectPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
       "packagesPath": "C:\\Users\\gregor.gergo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gregor.gergo\\masodik-projekt\\Program\\obj\\",
+      "outputPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gregor.gergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
