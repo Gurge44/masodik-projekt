@@ -255,7 +255,7 @@ namespace Program
                             WriteMatchesToConsole([.. type.Value], resultText: false);
                             foreach (var piece in type.Value)
                             {
-                                Console.WriteLine(piece.OutputText);
+                                Console.WriteLine(piece.ToString());
                             }
                         }
 
@@ -297,7 +297,7 @@ namespace Program
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.Write(". ");
                             Console.ResetColor();
-                            Console.WriteLine(piece.OutputText);
+                            Console.WriteLine(piece.ToString());
 
                             index++;
                         }
@@ -327,7 +327,7 @@ namespace Program
                             piece.Cost = COST;
 
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine($"\nModified piece:\n  {piece.OutputText}");
+                            Console.WriteLine($"\nModified piece:\n  {piece}");
                             Console.ResetColor();
                         }
 
@@ -337,9 +337,9 @@ namespace Program
 
                         foreach (var piece in Pieces)
                         {
-                            if (IsEqual(piece, modifiedPiece)) Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine(piece.OutputText);
-                            if (IsEqual(piece, modifiedPiece)) Console.ResetColor();
+                            if (piece.Equals(modifiedPiece)) Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine(piece.ToString());
+                            if (piece.Equals(modifiedPiece)) Console.ResetColor();
                         }
 
                         break;
@@ -350,7 +350,7 @@ namespace Program
                         var details = InputDetails();
                         Piece search = new(Type, details.NAME ?? string.Empty, details.PARAMETERS ?? string.Empty, details.COST);
 
-                        matches = Pieces.Where(x => IsEqual(x, search)).ToArray();
+                        matches = Pieces.Where(search.Equals).ToArray();
 
                         WriteMatchesToConsole();
 
@@ -369,7 +369,7 @@ namespace Program
                     if (sortByCost) _ = matches.OrderBy(x => x.Cost);
                     if (resultText) Console.WriteLine("Találatok:");
 
-                    foreach (Piece piece in matches) Console.WriteLine(piece.OutputText);
+                    foreach (Piece piece in matches) Console.WriteLine(piece.ToString());
                 }
 
                 string SearchForName()
@@ -389,8 +389,6 @@ namespace Program
 
                     return typeToFind;
                 }
-
-                bool IsEqual(Piece a, Piece b) => a.Type == b.Type && a.Name == b.Name && a.Parameters == b.Parameters && a.Cost == b.Cost;
             }
         }
     }
