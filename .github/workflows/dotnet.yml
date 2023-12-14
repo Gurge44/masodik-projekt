@@ -22,7 +22,7 @@ jobs:
         dotnet-version: '8.0.x'
     - name: Install Dependencies
       run: dotnet restore
-      working-directory: ./Program
+      working-directory: src/Program
     - name: Build
       run: dotnet build
     - name: Test with the dotnet CLI
