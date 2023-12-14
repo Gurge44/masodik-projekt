@@ -7,7 +7,7 @@ namespace Program
         private const string StartHTML = "<!doctype html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title>Bootstrap demo</title>\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n  </head>\r\n  <body>\r\n    <h1>Adatok:</h1>\n";
         private const string EndHTML = "\n\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\" crossorigin=\"anonymous\"></script>\r\n  </body>\r\n</html>";
 
-        private const bool Test = true;
+        private const bool Test = false;
 
         /// <summary>
         /// Write all contents of a string list to a txt file
@@ -183,7 +183,7 @@ namespace Program
                         string parameterToFind = Console.ReadLine() ?? string.Empty;
                         if (parameterToFind == string.Empty) break;
 
-                        matches = Pieces.Where(x => x.Name.Contains(parameterToFind, StringComparison.CurrentCultureIgnoreCase)).ToArray();
+                        matches = Pieces.Where(x => x.Parameters.Contains(parameterToFind, StringComparison.CurrentCultureIgnoreCase)).ToArray();
 
                         if (matches == null || matches.Length == 0)
                         {
@@ -279,6 +279,8 @@ namespace Program
                             Console.WriteLine($", Cost after: {piece.Cost}");
                         }
 
+                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
+
                         break;
 
                     case 7: // Egy alkatrész adatainak módosítása
@@ -341,6 +343,8 @@ namespace Program
                             Console.WriteLine(piece.ToString());
                             if (piece.Equals(modifiedPiece)) Console.ResetColor();
                         }
+
+                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
 
                         break;
 
