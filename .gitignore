@@ -11,3 +11,9 @@
 /Program/.vs/Program/FileContentIndex/read.lock
 /Program/.vs/Program/FileContentIndex/cc5eb626-b09a-4010-89a9-bfcf0c0350c0.vsidx
 /Program/.vs/Program/FileContentIndex/001c6269-afcf-483f-9fea-ede27c1a49ee.vsidx
+*.vsidx
+/Program/.vs/ProjectEvaluation/program.metadata.v7.bin
+/Program/.vs/ProjectEvaluation/program.projects.v7.bin
+/Program/obj/Debug/net8.0/Program.AssemblyInfo.cs
+/Program/obj/Debug/net8.0/Program.AssemblyInfoInputs.cache
+/Program/.vs/Program/v17/.suo
