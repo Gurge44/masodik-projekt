@@ -7,7 +7,7 @@ namespace Program
         private const string StartHTML = "<!doctype html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title>Bootstrap demo</title>\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n  </head>\r\n  <body>\r\n    <h1>Adatok:</h1>\n";
         private const string EndHTML = "\n\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\" crossorigin=\"anonymous\"></script>\r\n  </body>\r\n</html>";
 
-        private const bool Test = true;
+        private const bool Test = false;
 
         /// <summary>
         /// Write all contents of a string list to a txt file
@@ -183,7 +183,7 @@ namespace Program
                         string parameterToFind = Console.ReadLine() ?? string.Empty;
                         if (parameterToFind == string.Empty) break;
 
-                        matches = Pieces.Where(x => x.Name.Contains(parameterToFind, StringComparison.CurrentCultureIgnoreCase)).ToArray();
+                        matches = Pieces.Where(x => x.Parameters.Contains(parameterToFind, StringComparison.CurrentCultureIgnoreCase)).ToArray();
 
                         if (matches == null || matches.Length == 0)
                         {
@@ -255,7 +255,7 @@ namespace Program
                             WriteMatchesToConsole([.. type.Value], resultText: false);
                             foreach (var piece in type.Value)
                             {
-                                Console.WriteLine(piece.OutputText);
+                                Console.WriteLine(piece.ToString());
                             }
                         }
 
@@ -279,6 +279,8 @@ namespace Program
                             Console.WriteLine($", Cost after: {piece.Cost}");
                         }
 
+                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
+
                         break;
 
                     case 7: // Egy alkatrész adatainak módosítása
@@ -297,7 +299,7 @@ namespace Program
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.Write(". ");
                             Console.ResetColor();
-                            Console.WriteLine(piece.OutputText);
+                            Console.WriteLine(piece.ToString());
 
                             index++;
                         }
@@ -327,7 +329,7 @@ namespace Program
                             piece.Cost = COST;
 
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine($"\nModified piece:\n  {piece.OutputText}");
+                            Console.WriteLine($"\nModified piece:\n  {piece}");
                             Console.ResetColor();
                         }
 
@@ -337,10 +339,12 @@ namespace Program
 
                         foreach (var piece in Pieces)
                         {
-                            if (IsEqual(piece, modifiedPiece)) Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine(piece.OutputText);
-                            if (IsEqual(piece, modifiedPiece)) Console.ResetColor();
+                            if (piece.Equals(modifiedPiece)) Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine(piece.ToString());
+                            if (piece.Equals(modifiedPiece)) Console.ResetColor();
                         }
+
+                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
 
                         break;
 
@@ -350,7 +354,7 @@ namespace Program
                         var details = InputDetails();
                         Piece search = new(Type, details.NAME ?? string.Empty, details.PARAMETERS ?? string.Empty, details.COST);
 
-                        matches = Pieces.Where(x => IsEqual(x, search)).ToArray();
+                        matches = Pieces.Where(search.Equals).ToArray();
 
                         WriteMatchesToConsole();
 
@@ -369,7 +373,7 @@ namespace Program
                     if (sortByCost) _ = matches.OrderBy(x => x.Cost);
                     if (resultText) Console.WriteLine("Találatok:");
 
-                    foreach (Piece piece in matches) Console.WriteLine(piece.OutputText);
+                    foreach (Piece piece in matches) Console.WriteLine(piece.ToString());
                 }
 
                 string SearchForName()
@@ -389,8 +393,6 @@ namespace Program
 
                     return typeToFind;
                 }
-
-                bool IsEqual(Piece a, Piece b) => a.Type == b.Type && a.Name == b.Name && a.Parameters == b.Parameters && a.Cost == b.Cost;
             }
         }
     }

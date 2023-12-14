@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Program
+﻿namespace Program
 {
     internal class Piece(string? type, string? name, string? parameters, int cost)
     {
@@ -18,6 +12,20 @@ namespace Program
         public string Parameters { get => parameters; set => parameters = value ?? string.Empty; }
         public int Cost { get => cost; set => cost = value; }
 
-        public string OutputText => $"Típus: {Type}, Név: {Name}, Adatok: {Parameters}, Ár: {Cost} Ft";
+        public override string ToString() => $"Típus: {Type}, Név: {Name}, Adatok: {Parameters}, Ár: {Cost} Ft";
+        public override bool Equals(object? obj)
+        {
+            if (obj is not Piece piece) return false;
+            return piece.Type == Type && piece.Name == Name && piece.Parameters == Parameters && piece.Cost == Cost;
+        }
+        public override int GetHashCode()
+        {
+            int result = 0;
+            foreach (char character in Type) result += character;
+            foreach (char character in Name) result += character;
+            foreach (char character in Parameters) result += character;
+            result += Cost;
+            return result;
+        }
     }
 }
