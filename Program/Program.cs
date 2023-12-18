@@ -4,10 +4,28 @@ namespace Program
 {
     internal class Program
     {
-        private const string StartHTML = "<!doctype html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title>Bootstrap demo</title>\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n  </head>\r\n  <body>\r\n    <h1>Adatok:</h1>\n";
-        private const string EndHTML = "\n\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\" crossorigin=\"anonymous\"></script>\r\n  </body>\r\n</html>";
+        private const string StartHTML = """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Adatok</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+                <link rel="stylesheet" href="style.css">
+              </head>
+              <body>
+                <h1>Adatok:</h1>
+                    <div class="flex-container">
+            """;
+        private const string EndHTML = """
+                    </div>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+              </body>
+            </html>
+            """;
 
-        private const bool Test = false;
+        private const bool Test = true;
 
         /// <summary>
         /// Write all contents of a string list to a txt file
@@ -29,7 +47,19 @@ namespace Program
 
             void GenerateHTMLfile()
             {
-                List<string> html = [StartHTML, .. lines.Select(line => $"<p>{line.Trim()}</p>"), EndHTML];
+                List<string> html = [StartHTML, .. lines.Select(line =>
+                {
+                    string[] splitted = line.Split(';');
+                    if (splitted.Length < 2) return string.Empty;
+                    return $"""
+                        <div class='flex-item'>
+                            <div>{splitted[0]}</div>
+                            <div>{splitted[1]}</div>
+                            <div>{splitted[2]}</div>
+                            <div>{splitted[3]} Ft</div>
+                        </div>
+                        """;
+                }), EndHTML];
                 File.WriteAllLines($"{fileName}.html", html, System.Text.Encoding.UTF8);
             }
         }
@@ -83,12 +113,50 @@ namespace Program
             }
             else
             {
-                Random r = new();
-                InputPieces = [];
-                for (int i = 0; i < 200; i++)
-                {
-                    InputPieces.Add(new Piece($"type{r.Next(1, 9)}", $"name{r.Next(1, 1000)}", $"parameters{r.Next(1, 10000)}", r.Next(1, 1000000)));
-                }
+                InputPieces = [
+                    new("Monitor", "Brand 1 Monitor", "NA", 1985),
+                    new("Keyboard", "Brand 8 Keyboard", "NA", 3469),
+                    new("HDD/SSD", "Brand 7 HDD/SSD", "2 TB", 2717),
+                    new("Memory", "Brand 4 Memory", "16 GB", 4512),
+                    new("CPU", "Brand 5 CPU", "2.84 GHz", 3991),
+                    new("Keyboard", "Brand 6 Keyboard", "NA", 2548),
+                    new("Motherboard", "Brand 10 Motherboard", "NA", 4982),
+                    new("CPU", "Brand 7 CPU", "3.52 GHz", 2774),
+                    new("GraphicCard", "Brand 9 GraphicCard", "8 GB", 4722),
+                    new("Memory", "Brand 8 Memory", "32 GB", 1904),
+                    new("Monitor", "Brand 4 Monitor", "NA", 1614),
+                    new("GraphicCard", "Brand 2 GraphicCard", "4 GB", 451),
+                    new("HDD/SSD", "Brand 2 HDD/SSD", "512 GB", 3907),
+                    new("CPU", "Brand 4 CPU", "3.26 GHz", 4503),
+                    new("Motherboard", "Brand 2 Motherboard", "NA", 2041),
+                    new("Mouse", "Brand 7 Mouse", "NA", 1907),
+                    new("GraphicCard", "Brand 6 GraphicCard", "6 GB", 3561),
+                    new("Memory", "Brand 9 Memory", "8 GB", 4321),
+                    new("Mouse", "Brand 2 Mouse", "NA", 2214),
+                    new("HDD/SSD", "Brand 10 HDD/SSD", "1 TB", 1255),
+                    new("Monitor", "Brand 9 Monitor", "NA", 3771),
+                    new("Keyboard", "Brand 1 Keyboard", "NA", 3345),
+                    new("CPU", "Brand 3 CPU", "2.37 GHz", 1584),
+                    new("Mouse", "Brand 4 Mouse", "NA", 4566),
+                    new("Motherboard", "Brand 4 Motherboard", "NA", 2346),
+                    new("GraphicCard", "Brand 3 GraphicCard", "6 GB", 1100),
+                    new("Memory", "Brand 7 Memory", "16 GB", 4713),
+                    new("HDD/SSD", "Brand 5 HDD/SSD", "2 TB", 4899),
+                    new("Monitor", "Brand 6 Monitor", "NA", 3270),
+                    new("Mouse", "Brand 3 Mouse", "NA", 1236),
+                    new("Keyboard", "Brand 4 Keyboard", "NA", 4544),
+                    new("GraphicCard", "Brand 4 GraphicCard", "8 GB", 4916),
+                    new("Memory", "Brand 1 Memory", "32 GB", 1531),
+                    new("Motherboard", "Brand 6 Motherboard", "NA", 3155),
+                    new("CPU", "Brand 2 CPU", "3.09 GHz", 2874),
+                    new("Monitor", "Brand 3 Monitor", "NA", 4667),
+                    new("HDD/SSD", "Brand 9 HDD/SSD", "512 GB", 2928),
+                    new("Mouse", "Brand 5 Mouse", "NA", 3640),
+                    new("Keyboard", "Brand 3 Keyboard", "NA", 2102),
+                    new("GraphicCard", "Brand 8 GraphicCard", "4 GB", 3184),
+                    new("CPU", "Brand 10 CPU", "2.61 GHz", 1999),
+                    new("Motherboard", "Brand 1 Motherboard", "NA", 3625)
+                ];
             }
 
             return InputPieces;
@@ -233,29 +301,44 @@ namespace Program
 
                     case 5: // Statisztika készítése a típusokról
 
-                        Dictionary<string, List<Piece>> types = [];
+                        Dictionary<string, Dictionary<string, List<Piece>>> types = [];
+
                         foreach (var piece in Pieces)
                         {
-                            if (types.TryGetValue(piece.Type, out var n))
+                            if (types.TryGetValue(piece.Type, out var type))
                             {
-                                n.Add(piece);
+                                if (type.TryGetValue(piece.Name[..5], out var name))
+                                {
+                                    name.Add(piece);
+                                }
+                                else
+                                {
+                                    type[piece.Name[..5]] =
+                                    [
+                                        piece
+                                    ];
+                                }
                             }
                             else
                             {
-                                types[piece.Type] =
-                                [
-                                    piece
-                                ];
+                                types[piece.Type] = new()
+                                {
+                                    { piece.Name[..5], [ piece ] }
+                                };
                             }
                         }
 
                         foreach (var type in types)
                         {
+                            Console.ForegroundColor = ConsoleColor.DarkMagenta;
                             Console.WriteLine($"\n\n\"{type.Key}\":\n");
-                            WriteMatchesToConsole([.. type.Value], resultText: false);
-                            foreach (var piece in type.Value)
+                            Console.ResetColor();
+                            foreach (var name in type.Value)
                             {
-                                Console.WriteLine(piece.ToString());
+                                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                                Console.WriteLine($"\n\"{name.Key}\":");
+                                Console.ResetColor();
+                                WriteMatchesToConsole([.. name.Value], resultText: false);
                             }
                         }
 
@@ -272,14 +355,14 @@ namespace Program
                         var percentage = (int)Math.Round((1 - (lowerWithPercent / 100f)) * 100);
                         Console.WriteLine($"New percentage: {percentage}%");
 
-                        foreach (var piece in Pieces.Where(x => x.Type == typeToLower).ToArray())
+                        foreach (var piece in Pieces.Where(x => x.Type.Contains(typeToLower, StringComparison.CurrentCultureIgnoreCase) || typeToLower == "all").ToArray())
                         {
                             Console.Write($"Cost before: {piece.Cost}");
-                            piece.Cost = (int)Math.Round(piece.Cost - (float)(piece.Cost * (percentage / 100f)));
+                            piece.Cost = (int)Math.Round(piece.Cost - (float)(piece.Cost * ((100 - percentage) / 100f)));
                             Console.WriteLine($", Cost after: {piece.Cost}");
                         }
 
-                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
+                        WriteToFile([.. Pieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}")], "data");
 
                         break;
 
@@ -329,7 +412,7 @@ namespace Program
                             piece.Cost = COST;
 
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine($"\nModified piece:\n  {piece}");
+                            Console.WriteLine($"\nMódosított alkatrész:\n  {piece}");
                             Console.ResetColor();
                         }
 
@@ -344,7 +427,7 @@ namespace Program
                             if (piece.Equals(modifiedPiece)) Console.ResetColor();
                         }
 
-                        WriteToFile(Pieces.Select(x => x.ToString()).ToList(), "data");
+                        WriteToFile([.. Pieces.Select(piece => $"{piece.Type};{piece.Name};{piece.Parameters};{piece.Cost}")], "data");
 
                         break;
 

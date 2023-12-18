@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\gregor.gergo\\project\\rcs prog\\Program\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
+      "projectPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\Program\\Program.csproj",
       "packagesPath": "C:\\Users\\gregor.gergo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\obj\\",
+      "outputPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\Program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gregor.gergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,7 +28,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json": {},
+        "https://nuget.samboy.dev/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {

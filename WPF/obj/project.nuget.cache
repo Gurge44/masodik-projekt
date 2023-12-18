@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9nssIOaOu6VAjKWWfC8pE7YB5jbuzlWYaf+H2JbbI92kaHevnWDgAOz6lsedJ5ri0xbTTk0NYYeO+/2LSt87oA==",
+  "dgSpecHash": "13SfcXdivcgws/iKQI8gJlziDm+tgcM0t8vZYFNqFFX2x4iARMYZaRbh+R6uuAs6OR0LKOONTsJh/XGlF/2VLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gregor.gergo\\masodik-projekt\\WPF\\WPF.csproj",
+  "projectFilePath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

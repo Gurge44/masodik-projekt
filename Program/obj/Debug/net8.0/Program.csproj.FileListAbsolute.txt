@@ -28,3 +28,18 @@ C:\Users\gregor.gergo\masodik-projekt\Program\obj\Debug\net8.0\refint\Program.dl
 C:\Users\gregor.gergo\masodik-projekt\Program\obj\Debug\net8.0\Program.pdb
 C:\Users\gregor.gergo\masodik-projekt\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
 C:\Users\gregor.gergo\masodik-projekt\Program\obj\Debug\net8.0\ref\Program.dll
+C:\Users\gregor.gergo\project\rcs prog\Program\bin\Debug\net8.0\Program.exe
+C:\Users\gregor.gergo\project\rcs prog\Program\bin\Debug\net8.0\Program.deps.json
+C:\Users\gregor.gergo\project\rcs prog\Program\bin\Debug\net8.0\Program.runtimeconfig.json
+C:\Users\gregor.gergo\project\rcs prog\Program\bin\Debug\net8.0\Program.dll
+C:\Users\gregor.gergo\project\rcs prog\Program\bin\Debug\net8.0\Program.pdb
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.AssemblyInfoInputs.cache
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.AssemblyInfo.cs
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.csproj.CoreCompileInputs.cache
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.sourcelink.json
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.dll
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\refint\Program.dll
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.pdb
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
+C:\Users\gregor.gergo\project\rcs prog\Program\obj\Debug\net8.0\ref\Program.dll

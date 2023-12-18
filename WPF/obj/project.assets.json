@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gregor.gergo\\masodik-projekt\\WPF\\WPF.csproj",
+      "projectUniqueName": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj",
       "projectName": "WPF",
-      "projectPath": "C:\\Users\\gregor.gergo\\masodik-projekt\\WPF\\WPF.csproj",
+      "projectPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj",
       "packagesPath": "C:\\Users\\gregor.gergo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gregor.gergo\\masodik-projekt\\WPF\\obj\\",
+      "outputPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gregor.gergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,7 +28,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json": {},
+        "https://nuget.samboy.dev/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
