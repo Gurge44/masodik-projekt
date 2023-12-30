@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 100%;
+    font-size: 5em;
+    background-image: url(back.png);
+}
+header
+{
+    height: 5em;
+    border-bottom: 0.2em solid red;
+    background-color: rgba(0, 0, 0, 90%);
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.inside{
+    border: 0.2em solid red;
+    background-color: black;
+    width: 40%;
+    height: 60%;
+    color: white;
+    padding: 1em;
+    margin-bottom: 20px;
+}
+#out{
+    
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+    
+}
+
+#image{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
