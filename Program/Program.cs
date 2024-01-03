@@ -25,7 +25,7 @@ namespace Program
             </html>
             """;
 
-        private const bool Test = false;
+        private const bool Test = true;
 
         /// <summary>
         /// Write all contents of a string list to a txt file

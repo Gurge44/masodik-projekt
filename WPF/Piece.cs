@@ -12,7 +12,7 @@ internal class Piece(string? type, string? name, string? parameters, int cost)
     public string Parameters { get => parameters; set => parameters = value ?? string.Empty; }
     public int Cost { get => cost; set => cost = value; }
 
-    public override string ToString() => $"Típus: {Type}, Név: {Name}, Adatok: {Parameters}, Ár: {Cost} Ft";
+    public override string ToString() => $"Type: {Type}, Name: {Name}, Data: {Parameters}, Cost: {Cost} Ft";
     public override bool Equals(object? obj)
     {
         if (obj is not Piece piece) return false;

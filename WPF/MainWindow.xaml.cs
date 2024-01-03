@@ -58,14 +58,14 @@ namespace WPF
             {
                 List<string> html = [StartHTML, .. lines.Select(line =>
                 {
-                    string[] splitted = line.Split(';');
+                    string[] splitted = line.Split(',');
                     if (splitted.Length < 2) return string.Empty;
                     return $"""
                         <div class='flex-item'>
                             <div>{splitted[0]}</div>
                             <div>{splitted[1]}</div>
                             <div>{splitted[2]}</div>
-                            <div>{splitted[3]} Ft</div>
+                            <div>{splitted[3]}</div>
                         </div>
                         """;
                 }), EndHTML];

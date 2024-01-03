@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj": {}
+    "E:\\Personal Projects\\C#\\2nd Project\\WPF\\WPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj": {
+    "E:\\Personal Projects\\C#\\2nd Project\\WPF\\WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj",
+        "projectUniqueName": "E:\\Personal Projects\\C#\\2nd Project\\WPF\\WPF.csproj",
         "projectName": "WPF",
-        "projectPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\WPF.csproj",
-        "packagesPath": "C:\\Users\\gregor.gergo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gregor.gergo\\project\\rcs prog\\WPF\\obj\\",
+        "projectPath": "E:\\Personal Projects\\C#\\2nd Project\\WPF\\WPF.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal Projects\\C#\\2nd Project\\WPF\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gregor.gergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -36,6 +40,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
