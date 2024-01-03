@@ -25,7 +25,7 @@ namespace Program
             </html>
             """;
 
-        private const bool Test = true;
+        private const bool Test = false;
 
         /// <summary>
         /// Write all contents of a string list to a txt file
@@ -81,8 +81,9 @@ namespace Program
                     while (result <= 0 || result > 8)
                     {
                         var answer = Console.ReadLine();
-                        if (answer?.ToLower() == "quit")
+                        if (answer?.ToLower().Trim() == "quit")
                         {
+                            stop = true;
                             break;
                         }
                         if (!int.TryParse(answer, out result))
@@ -90,6 +91,8 @@ namespace Program
                             Console.WriteLine("Helytelen bevitel. A választott alkatrész sorszámát írd be!");
                         }
                     }
+
+                    if (stop) break;
 
                     string type = result switch
                     {
@@ -113,6 +116,7 @@ namespace Program
             }
             else
             {
+                // Python random.randint generálás
                 InputPieces = [
                     new("Monitor", "Brand 1 Monitor", "NA", 1985),
                     new("Keyboard", "Brand 8 Keyboard", "NA", 3469),
@@ -133,7 +137,7 @@ namespace Program
                     new("GraphicCard", "Brand 6 GraphicCard", "6 GB", 3561),
                     new("Memory", "Brand 9 Memory", "8 GB", 4321),
                     new("Mouse", "Brand 2 Mouse", "NA", 2214),
-                    new("HDD/SSD", "Brand 10 HDD/SSD", "1 TB", 1255),
+                    new("HDD/SSD", "Brand 2 HDD/SSD", "1 TB", 1255),
                     new("Monitor", "Brand 9 Monitor", "NA", 3771),
                     new("Keyboard", "Brand 1 Keyboard", "NA", 3345),
                     new("CPU", "Brand 3 CPU", "2.37 GHz", 1584),
@@ -193,10 +197,11 @@ namespace Program
 
             while (true)
             {
+                Console.WriteLine("Alkatrész hozzáadásához írj be '0'-t!");
                 Console.WriteLine("Most kereshetsz a bevitt adatok között!\n  1. Keresés típusra\n  2. Keresés névre\n  3. Keresés paraméterek/adatok között\n  4. Keresés árra\n  5. Statisztika készítése a típusokról\n  6. Adott termékkategória összes árának csökkentése adott százalékkal\n  7. Egy alkatrész adatainak módosítása\n  8. Pontos keresés (az összes adat szükséges)");
 
-                int result = 0;
-                while (result <= 0 || result > 8)
+                int result = -1;
+                while (result < 0 || result > 8)
                 {
                     var answer = Console.ReadLine();
                     if (!int.TryParse(answer, out result))
@@ -209,11 +214,17 @@ namespace Program
 
                 switch (result)
                 {
+                    case 0:
+
+                        Main();
+
+                        break;
+
                     case 1: // Keresés típusra
 
                         string typeToFind = SearchForType();
 
-                        matches = Pieces.Where(x => x.Type.Contains(typeToFind)).ToArray();
+                        matches = Pieces.Where(x => x.Type.Contains(typeToFind, StringComparison.CurrentCultureIgnoreCase)).ToArray();
 
                         if (matches == null || matches.Length == 0)
                         {
@@ -305,15 +316,18 @@ namespace Program
 
                         foreach (var piece in Pieces)
                         {
+                            string namePiece = piece.Name;
+                            while (namePiece.Length < 7) namePiece += " ";
+
                             if (types.TryGetValue(piece.Type, out var type))
                             {
-                                if (type.TryGetValue(piece.Name[..5], out var name))
+                                if (type.TryGetValue(namePiece[..7], out var name))
                                 {
                                     name.Add(piece);
                                 }
                                 else
                                 {
-                                    type[piece.Name[..5]] =
+                                    type[namePiece[..7]] =
                                     [
                                         piece
                                     ];
@@ -323,7 +337,7 @@ namespace Program
                             {
                                 types[piece.Type] = new()
                                 {
-                                    { piece.Name[..5], [ piece ] }
+                                    { namePiece[..7], [ piece ] }
                                 };
                             }
                         }
@@ -351,6 +365,7 @@ namespace Program
                         Console.Write("Az árak hány százalékkal legyenek csökkentve? ");
                         string input = Console.ReadLine() ?? string.Empty;
                         if (!int.TryParse(input, out var lowerWithPercent)) break;
+                        if (lowerWithPercent is > 100 or <= 0) break;
 
                         var percentage = (int)Math.Round((1 - (lowerWithPercent / 100f)) * 100);
                         Console.WriteLine($"New percentage: {percentage}%");
@@ -385,6 +400,12 @@ namespace Program
                             Console.WriteLine(piece.ToString());
 
                             index++;
+                        }
+
+                        if (index == 1)
+                        {
+                            Console.WriteLine("A név, amire rákerestél ({pieceName}), nem található.");
+                            break;
                         }
 
                         Console.Write("Írd be annak az alkatrésznek a sorszámát,\namelyiknek az adatait módosítani szeretnéd: ");
@@ -463,7 +484,6 @@ namespace Program
                 {
                     Console.Write("Keresendő név: ");
                     string nameToFind = Console.ReadLine() ?? string.Empty;
-                    if (nameToFind == string.Empty) return string.Empty;
 
                     return nameToFind;
                 }
@@ -472,7 +492,6 @@ namespace Program
                 {
                     Console.Write("Keresendő típus: ");
                     string typeToFind = Console.ReadLine() ?? string.Empty;
-                    if (typeToFind == string.Empty) return string.Empty;
 
                     return typeToFind;
                 }
