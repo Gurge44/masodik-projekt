@@ -11,9 +11,28 @@ namespace WPF
     public partial class MainWindow : Window
     {
         private readonly List<Piece> Pieces = [];
-        private const string StartHTML = "<!doctype html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title>Bootstrap demo</title>\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">\r\n  </head>\r\n  <body>\r\n    <h1>Adatok:</h1>\n";
-        private const string EndHTML = "\n\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\" crossorigin=\"anonymous\"></script>\r\n  </body>\r\n</html>";
         private const string fileName = "data";
+
+        private const string StartHTML = """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Adatok</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+                <link rel="stylesheet" href="style.css">
+              </head>
+              <body>
+                <h1>Adatok:</h1>
+                    <div class="flex-container">
+            """;
+        private const string EndHTML = """
+                    </div>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+              </body>
+            </html>
+            """;
 
         public MainWindow()
         {
@@ -37,7 +56,19 @@ namespace WPF
 
             void GenerateHTMLfile()
             {
-                List<string> html = [StartHTML, .. lines.Select(line => $"<p>{line.Trim()}</p>"), EndHTML];
+                List<string> html = [StartHTML, .. lines.Select(line =>
+                {
+                    string[] splitted = line.Split(';');
+                    if (splitted.Length < 2) return string.Empty;
+                    return $"""
+                        <div class='flex-item'>
+                            <div>{splitted[0]}</div>
+                            <div>{splitted[1]}</div>
+                            <div>{splitted[2]}</div>
+                            <div>{splitted[3]} Ft</div>
+                        </div>
+                        """;
+                }), EndHTML];
                 File.WriteAllLines($"{fileName}.html", html, System.Text.Encoding.UTF8);
             }
 
