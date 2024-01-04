@@ -15,7 +15,7 @@
         public override string ToString() => $"Típus: {Type}, Név: {Name}, Adatok: {Parameters}, Ár: {Cost} Ft";
         public override bool Equals(object? obj)
         {
-            if (obj is not Piece piece) return false;
+            if (obj is not Piece piece) return base.Equals(obj);
             return piece.Type == Type && piece.Name == Name && piece.Parameters == Parameters && piece.Cost == Cost;
         }
         public override int GetHashCode()

@@ -1,0 +1,40 @@
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF_MarkupCompile.cache
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.g.resources
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.AssemblyInfoInputs.cache
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.AssemblyInfo.cs
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.csproj.CoreCompileInputs.cache
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.sourcelink.json
+C:\Users\gregor.gergo\masodik-projekt\WPF\bin\Debug\net8.0-windows\WPF.exe
+C:\Users\gregor.gergo\masodik-projekt\WPF\bin\Debug\net8.0-windows\WPF.deps.json
+C:\Users\gregor.gergo\masodik-projekt\WPF\bin\Debug\net8.0-windows\WPF.runtimeconfig.json
+C:\Users\gregor.gergo\masodik-projekt\WPF\bin\Debug\net8.0-windows\WPF.dll
+C:\Users\gregor.gergo\masodik-projekt\WPF\bin\Debug\net8.0-windows\WPF.pdb
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.dll
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\refint\WPF.dll
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.pdb
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\WPF.genruntimeconfig.cache
+C:\Users\gregor.gergo\masodik-projekt\WPF\obj\Debug\net8.0-windows\ref\WPF.dll
+E:\Personal Projects\C#\2nd Project\WPF\bin\Debug\net8.0-windows\WPF.exe
+E:\Personal Projects\C#\2nd Project\WPF\bin\Debug\net8.0-windows\WPF.deps.json
+E:\Personal Projects\C#\2nd Project\WPF\bin\Debug\net8.0-windows\WPF.runtimeconfig.json
+E:\Personal Projects\C#\2nd Project\WPF\bin\Debug\net8.0-windows\WPF.dll
+E:\Personal Projects\C#\2nd Project\WPF\bin\Debug\net8.0-windows\WPF.pdb
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\MainWindow.baml
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\App.g.cs
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF_MarkupCompile.cache
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.g.resources
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.GeneratedMSBuildEditorConfig.editorconfig
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.AssemblyInfoInputs.cache
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.AssemblyInfo.cs
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.csproj.CoreCompileInputs.cache
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.sourcelink.json
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.dll
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\refint\WPF.dll
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.pdb
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\WPF.genruntimeconfig.cache
+E:\Personal Projects\C#\2nd Project\WPF\obj\Debug\net8.0-windows\ref\WPF.dll
