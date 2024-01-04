@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Personal Projects\\C#\\2nd Project\\Program\\Program.csproj": {}
+    "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj": {}
   },
   "projects": {
-    "E:\\Personal Projects\\C#\\2nd Project\\Program\\Program.csproj": {
+    "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Personal Projects\\C#\\2nd Project\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "E:\\Personal Projects\\C#\\2nd Project\\Program\\Program.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Personal Projects\\C#\\2nd Project\\Program\\obj\\",
+        "projectPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\Program.csproj",
+        "packagesPath": "C:\\Users\\gregor.gergo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gregor.gergo\\pm web prog\\rcs prog\\Program\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\gregor.gergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.bepinex.dev/v3/index.json": {},
-          "https://nuget.samboy.dev/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -40,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

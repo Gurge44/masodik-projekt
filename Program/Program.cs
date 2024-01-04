@@ -214,9 +214,9 @@ namespace Program
 
                 switch (result)
                 {
-                    case 0:
+                    case 0: // Még több alkatrész bevitele
 
-                        Main();
+                        InputPieces.AddRange(InputPiecesByUser());
 
                         break;
 
