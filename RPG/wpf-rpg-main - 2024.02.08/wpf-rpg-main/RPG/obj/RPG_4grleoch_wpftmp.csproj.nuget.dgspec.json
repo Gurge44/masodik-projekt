@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\boros.sandor.kevin\\Boros Sándor Kevin\\Projekt_3\\wpf-rpg-main (2)\\wpf-rpg-main\\RPG\\RPG.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\boros.sandor.kevin\\Boros Sándor Kevin\\Projekt_3\\wpf-rpg-main (2)\\wpf-rpg-main\\RPG\\RPG.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\boros.sandor.kevin\\Boros Sándor Kevin\\Projekt_3\\wpf-rpg-main (2)\\wpf-rpg-main\\RPG\\RPG.csproj",
+        "projectName": "RPG",
+        "projectPath": "C:\\Users\\boros.sandor.kevin\\Boros Sándor Kevin\\Projekt_3\\wpf-rpg-main (2)\\wpf-rpg-main\\RPG\\RPG.csproj",
+        "packagesPath": "C:\\Users\\boros.sandor.kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\boros.sandor.kevin\\Boros Sándor Kevin\\Projekt_3\\wpf-rpg-main (2)\\wpf-rpg-main\\RPG\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\boros.sandor.kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

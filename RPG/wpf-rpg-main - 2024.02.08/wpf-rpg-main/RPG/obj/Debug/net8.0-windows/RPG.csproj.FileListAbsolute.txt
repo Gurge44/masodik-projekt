@@ -1,0 +1,112 @@
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.baml
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\CharacterListPage.baml
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\MainWindow.baml
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.g.cs
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\CharacterListPage.g.cs
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\MainWindow.g.cs
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\App.g.cs
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.cache
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.g.resources
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.GeneratedMSBuildEditorConfig.editorconfig
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfoInputs.cache
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfo.cs
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.csproj.CoreCompileInputs.cache
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.sourcelink.json
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RPG.exe
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RPG.deps.json
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RPG.runtimeconfig.json
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RPG.dll
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RPG.pdb
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.dll
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\refint\RPG.dll
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.pdb
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\RPG.genruntimeconfig.cache
+E:\Sulis fájlok\rcs prodzsekt\RPG\obj\Debug\net8.0-windows\ref\RPG.dll
+E:\Sulis fájlok\rcs prodzsekt\RPG\bin\Debug\net8.0-windows\RandomNames.txt
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RandomNames.txt
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.exe
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.deps.json
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.runtimeconfig.json
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.dll
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.pdb
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.baml
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.baml
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.cache
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.lref
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.baml
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.baml
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.g.resources
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfoInputs.cache
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfo.cs
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.csproj.CoreCompileInputs.cache
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.dll
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\refint\RPG.dll
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.pdb
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.genruntimeconfig.cache
+C:\Users\boros.sandor.kevin\BorosSándorKevin\Proj\Projekt\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ref\RPG.dll
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.baml
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.baml
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.cache
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.lref
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.dll
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\refint\RPG.dll
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.pdb
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RandomNames.txt
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.exe
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.deps.json
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.runtimeconfig.json
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.dll
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.pdb
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.baml
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.baml
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.g.resources
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfoInputs.cache
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfo.cs
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.csproj.CoreCompileInputs.cache
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.genruntimeconfig.cache
+C:\Users\boros.sandor.kevin\Boros Sándor Kevin\Projekt_3\wpf-rpg-main (2)\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ref\RPG.dll
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.baml
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.baml
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterEditingPage.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\CharacterListPage.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.cache
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG_MarkupCompile.lref
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.dll
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\refint\RPG.dll
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.pdb
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RandomNames.txt
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.exe
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.deps.json
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.runtimeconfig.json
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.dll
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\bin\Debug\net8.0-windows\RPG.pdb
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ChooseToFight.baml
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\Fight.baml
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.g.resources
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfoInputs.cache
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfo.cs
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.csproj.CoreCompileInputs.cache
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\RPG.genruntimeconfig.cache
+C:\Users\Boros Sandor Kevin\Desktop\C#\Új mappa (2)\Projekt\Új mappa\wpf-rpg-main - 2024.02.08\wpf-rpg-main\RPG\obj\Debug\net8.0-windows\ref\RPG.dll
